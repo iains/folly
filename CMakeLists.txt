@@ -668,7 +668,7 @@ if (BUILD_TESTS OR BUILD_BENCHMARKS)
       TEST unbounded_blocking_queue_test SOURCES UnboundedBlockingQueueTest.cpp
 
     DIRECTORY experimental/test/
-      TEST autotimer_test SOURCES AutoTimerTest.cpp
+      TEST autotimer_test BROKEN SOURCES AutoTimerTest.cpp
       TEST bits_test_2 SOURCES BitsTest.cpp
       TEST bitvector_test SOURCES BitVectorCodingTest.cpp
       TEST dynamic_parser_test SOURCES DynamicParserTest.cpp
@@ -691,6 +691,48 @@ if (BUILD_TESTS OR BUILD_BENCHMARKS)
       TEST stringkeyed_test SOURCES StringKeyedTest.cpp
       TEST test_util_test SOURCES TestUtilTest.cpp
       TEST tuple_ops_test SOURCES TupleOpsTest.cpp
+
+    DIRECTORY experimental/coro/test/
+      TEST coro_accumulate_test SOURCES AccumulateTest.cpp
+      TEST coro_asyncgen_benchmark SOURCES AsyncGeneratorBenchmark.cpp
+      TEST coro_asyncgenerator_test SOURCES AsyncGeneratorTest.cpp
+      TEST coro_asyncpipe_test SOURCES AsyncPipeTest.cpp
+      TEST coro_asyncscope_test SOURCES AsyncScopeTest.cpp
+      TEST coro_asyncstack_test SOURCES AsyncStackTest.cpp
+      TEST coro_currentexecutor_test SOURCES CurrentExecutorTest.cpp
+      TEST coro_baton_test SOURCES BatonTest.cpp
+      TEST coro_blockingwaitbenchmark_test SOURCES BlockingWaitBenchmark.cpp
+      TEST coro_blockingwait_test SOURCES BlockingWaitTest.cpp
+      TEST coro_boundedqueue_test SOURCES BoundedQueueTest.cpp
+      TEST coro_collectallbenchmark_test SOURCES CollectAllBenchmark.cpp
+      TEST coro_collect_test SOURCES CollectTest.cpp
+      TEST coro_concat_test SOURCES ConcatTest.cpp
+      TEST coro_corobenchmarkallocator_test SOURCES CoroBenchmarkAllocator.cpp
+      TEST coro_corobenchmarkNVRO_test SOURCES CoroBenchmarkNRVO.cpp
+      TEST corotest SOURCES CoroTest.cpp
+      TEST coro_error_test SOURCES ErrorTest.cpp
+      TEST coro_filter_test SOURCES FilterTest.cpp
+      TEST coro_futureutil_test SOURCES FutureUtilTest.cpp
+      TEST coro_generator_test SOURCES GeneratorTest.cpp
+      TEST coro_gmockhelpers_test SOURCES GmockHelpersTest.cpp
+      TEST coro_gtesthelpers_test SOURCES GtestHelpersTest.cpp
+      TEST coro_inlinetask_test SOURCES InlineTaskTest.cpp
+      TEST coro_merge_test HANGING SOURCES MergeTest.cpp
+      TEST coro_mutext_test SOURCES MutexTest.cpp
+      TEST coro_promisebenchmark_test SOURCES PromiseBenchmark.cpp
+      TEST coro_promise_test SOURCES PromiseTest.cpp
+      TEST coro_retry_test SOURCES RetryTest.cpp
+      TEST coro_rustadaptors_test SOURCES RustAdaptorsTest.cpp
+      TEST coro_scopeexit_test BROKEN SOURCES ScopeExitTest.cpp
+      TEST coro_sharedmutex_test SOURCES SharedMutexTest.cpp
+      TEST coro_smallunboundedqueue_test SOURCES SmallUnboundedQueueTest.cpp
+      TEST coro_taskbenchmark_test SOURCES TaskBenchmark.cpp
+      TEST coro_task_test SOURCES TaskTest.cpp
+      TEST coro_timeout_test SOURCES TimeoutTest.cpp
+      TEST coro_taits_test SOURCES TraitsTest.cpp
+      TEST coro_traits_test SOURCES TraitsTest.cpp
+      TEST coro_transform_test SOURCES TransformTest.cpp
+      TEST coro_unboundedqueue_test SOURCES UnboundedQueueTest.cpp
 
     DIRECTORY experimental/io/test/
       TEST fs_util_test SOURCES FsUtilTest.cpp
@@ -940,7 +982,7 @@ if (BUILD_TESTS OR BUILD_BENCHMARKS)
     DIRECTORY synchronization/test/
       TEST atomic_struct_test SOURCES AtomicStructTest.cpp
       TEST small_locks_test SOURCES SmallLocksTest.cpp
-      TEST atomic_util_test SOURCES AtomicUtilTest.cpp
+      TEST atomic_util_test BROKEN SOURCES AtomicUtilTest.cpp
 
     DIRECTORY test/
       TEST ahm_int_stress_test SOURCES AHMIntStressTest.cpp
@@ -988,7 +1030,7 @@ if (BUILD_TESTS OR BUILD_BENCHMARKS)
       TEST file_util_test SOURCES FileUtilTest.cpp
       BENCHMARK fingerprint_benchmark SOURCES FingerprintBenchmark.cpp
       TEST fingerprint_test SOURCES FingerprintTest.cpp
-      TEST fixed_string_test SOURCES FixedStringTest.cpp
+      TEST fixed_string_test BROKEN SOURCES FixedStringTest.cpp
       TEST format_other_test SOURCES FormatOtherTest.cpp
       BENCHMARK format_benchmark SOURCES FormatBenchmark.cpp
       TEST format_test SOURCES FormatTest.cpp
